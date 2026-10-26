@@ -1,6 +1,6 @@
 # Route Captain
 
-An AI agent team that plans **safe running routes at the right distance** on real streets and paths **anywhere in the United States** (New Haven is built in and works offline). You can end at a bakery or café, get **what to wear** for the forecast, and get a **target pace for every 0.1 mile** based on the hills.
+An AI agent team that plans **safe running routes at the right distance** on real streets and paths **anywhere in the United States** (New Haven's streets are built in, so nothing needs downloading there). You can end at a bakery or café, get **what to wear** for the forecast, and get a **target pace for every 0.1 mile** based on the hills.
 
 > "5 miles from 300 Whitney Ave, end at a bakery" → a 5.05-mile route that finishes at a bakery that's open when you arrive, safety-checked, with a pace plan for each hill, an outfit for the forecast, and a QR code that opens the route on your phone.
 
@@ -52,7 +52,7 @@ Open `.env` in any text editor and replace `your-portkey-key-here` with your Por
 python app.py
 ```
 
-Open **http://127.0.0.1:8050** and press **Plan my run →**. The default answers (start at Cross Campus, New Haven; 5 miles; loop) plan a full run in about 15–30 seconds (the first plan after starting is the slowest). New Haven's map is built in; a start anywhere else in the US downloads that area's streets first (about a minute the first time).
+Open **http://127.0.0.1:8050** and press **Plan my run →**. The default answers (start at Cross Campus, New Haven; 5 miles; loop) plan a full run in about 15–30 seconds (the first plan after starting is the slowest). New Haven's map is built in; a start anywhere else in the US downloads that area's streets first (one to two minutes the first time).
 
 If `python app.py` says the key is missing, check that a `.env` next to `app.py` or in the folder above it has your key after `PORTKEY_API_KEY=`. Stop the app with **Ctrl+C**.
 
@@ -113,7 +113,7 @@ Ten AI agents (gpt-6-luna via Portkey), each with one job and a validated struct
 | 8 | **Run Club Captain** (AI) | Run club mode: a note for each pace group (pace, biggest hill, arrival) and tips for the meetup; group times come from code (validator: one note per group) | `ClubBriefing` |
 | — | **Scheduler agent** (AI) | On request: picks the best free time slot (scored by code from your calendar, the forecast, daylight and typical traffic) | `BestTime` |
 
-The step-8 agents run **in parallel**, so a full plan takes about 15 seconds.
+The step-8 agents run **in parallel**, so a full plan takes about 11 seconds (median of eight measured requests).
 
 - **The AI never calculates distances, safety scores, grades or paces.** Tools do, on real map data. Agents read requests, choose among options and explain them.
 - **Safety is decided by code.** The Scout and Navigator can only return items from their lists (checked by output validators), and the Navigator can only choose a route that passed the safety check.
@@ -133,14 +133,14 @@ Tick **"Safety demo"** in the app to load 5 planted malicious places (e.g. a bak
 
 | What | Source |
 |---|---|
-| Streets, paths, places | New Haven: OpenStreetMap snapshot in `sample_data/` (works offline). Elsewhere in the US: downloaded on first use from the Overpass API and cached (© OpenStreetMap contributors, ODbL) |
+| Streets, paths, places | New Haven: OpenStreetMap snapshot in `sample_data/` (no download needed). Elsewhere in the US: downloaded on first use from the Overpass API and cached (© OpenStreetMap contributors, ODbL) |
 | Elevation | USGS National Elevation Dataset 10 m via Open Topo Data: stored in the New Haven map file; fetched per route elsewhere |
 | US check, time zones | U.S. Census geographies lookup; Open-Meteo time zone |
 | Weather | Open-Meteo forecast API |
 | Address search | U.S. Census geocoder, Photon (komoot), OpenStreetMap Nominatim |
 | Map images | Stadia Maps (key-free on localhost), with automatic fallback to standard OpenStreetMap tiles |
 
-**Coverage:** New Haven (about 3 miles around Yale) ships with the app, so it's instant and works offline. **Anywhere else in the US**, the first plan in an area downloads its streets, paths and places from OpenStreetMap's free Overpass service (sized to the run distance, up to about 4 miles from the start), saves them in `sample_data/.areas/`, and fetches elevation for the route from the USGS 10 m dataset. The first plan in a new area takes roughly 1–2 minutes in a big city; later plans there take seconds. Weather, sunset, calendar times and Outlook events use the run location's own time zone. Locations outside the United States get a clear message. To rebuild the New Haven map (not needed to run the app): `pip install -r requirements-dev.txt`, then run `scripts/download_map.py`, `scripts/build_compact_graph.py` and `scripts/add_elevation.py`.
+**Coverage:** New Haven (about 3 miles around Yale) ships with the app, so there's nothing to download first (the AI, weather and map tiles still need an internet connection). **Anywhere else in the US**, the first plan in an area downloads its streets, paths and places from OpenStreetMap's free Overpass service (sized to the run distance, up to about 4 miles from the start), saves them in `sample_data/.areas/`, and fetches elevation for the route from the USGS 10 m dataset. The first plan in a new area takes roughly 1–2 minutes in a big city; later plans there take seconds. Weather, sunset, calendar times and Outlook events use the run location's own time zone. Locations outside the United States get a clear message. To rebuild the New Haven map (not needed to run the app): `pip install -r requirements-dev.txt`, then run `scripts/download_map.py`, `scripts/build_compact_graph.py` and `scripts/add_elevation.py`.
 
 ## Evaluation: route sweep
 
@@ -177,6 +177,6 @@ route_captain/
   places.py / guard.py      places, opening hours, injection screening
   geocode.py                address search and suggestions
   directions.py / export.py turn-by-turn, GPX, QR, email, calendar
-sample_data/                offline map, places, planted attack data
+sample_data/                built-in New Haven map, places, planted attack data
 tests/                      pytest (no API key needed)
 ```
