@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 170 124" width="170" height="124" role="img" aria-label="A smiling running shoe">
+  <!-- speed lines and dust puffs behind the heel -->
+  <g stroke="#63AAFF" stroke-width="5" stroke-linecap="round">
+    <line x1="6" y1="54" x2="26" y2="54"/>
+    <line x1="2" y1="68" x2="28" y2="68"/>
+    <line x1="10" y1="82" x2="28" y2="82"/>
+  </g>
+  <g fill="#BDD5EA">
+    <circle cx="22" cy="104" r="7"/>
+    <circle cx="10" cy="100" r="4.5"/>
+  </g>
+
+  <!-- sole -->
+  <path d="M34 88 H148 Q160 88 158 98 Q156 108 144 108 H44 Q30 108 30 98 Q30 88 34 88 Z"
+        fill="#ffffff" stroke="#00356B" stroke-width="4" stroke-linejoin="round"/>
+  <path d="M40 103 H146" stroke="#63AAFF" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- upper -->
+  <path d="M36 90 V48 Q36 36 48 36 H70 Q79 36 82 45 L85 51 Q120 46 143 60 Q160 72 158 90 Z"
+        fill="#00356B" stroke="#00356B" stroke-width="4" stroke-linejoin="round"/>
+  <!-- collar and tongue -->
+  <path d="M42 41 Q57 31 76 41" stroke="#002650" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M63 42 Q64 24 75 24 Q86 24 83 42 Z" fill="#286DC0"/>
+  <!-- laces -->
+  <g stroke="#ffffff" stroke-width="3.4" stroke-linecap="round">
+    <line x1="81" y1="48" x2="89" y2="56"/>
+    <line x1="92" y1="48" x2="100" y2="57"/>
+  </g>
+  <!-- side stripe -->
+  <path d="M44 72 Q72 88 106 74" stroke="#63AAFF" stroke-width="6" fill="none" stroke-linecap="round"/>
+
+  <!-- face on the toe -->
+  <ellipse cx="121" cy="69" rx="7" ry="8.2" fill="#ffffff"/>
+  <ellipse cx="141" cy="72" rx="7" ry="8.2" fill="#ffffff"/>
+  <circle cx="122.5" cy="71" r="4.4" fill="#00264F"/>
+  <circle cx="142.5" cy="74" r="4.4" fill="#00264F"/>
+  <circle cx="124.2" cy="68.8" r="1.7" fill="#ffffff"/>
+  <circle cx="144.2" cy="71.8" r="1.7" fill="#ffffff"/>
+  <ellipse cx="112" cy="81" rx="5" ry="2.8" fill="#63AAFF" opacity=".8"/>
+  <ellipse cx="151" cy="84" rx="4.2" ry="2.6" fill="#63AAFF" opacity=".8"/>
+  <path d="M126 81 Q132 87.5 138 82.5" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+
+  <!-- sparkle -->
+  <path d="M152 30 l3 8 l8 3 l-8 3 l-3 8 l-3 -8 l-8 -3 l8 -3 Z" fill="#63AAFF"/>
+  <path d="M136 14 l1.8 4.6 l4.6 1.8 l-4.6 1.8 l-1.8 4.6 l-1.8 -4.6 l-4.6 -1.8 l4.6 -1.8 Z" fill="#BDD5EA"/>
+</svg>

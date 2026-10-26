@@ -1,0 +1,15 @@
+.venv/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+cache/
+sample_data/.geocode_cache.json
+# raw download (40 MB); the app uses the compact new_haven_graph.json.gz
+sample_data/new_haven_walk.graphml
+sample_data/.areas/
+sample_data/.spend.json
+
+# planning notes kept out of the public repo
+PLAN.md
+OUTREACH.md

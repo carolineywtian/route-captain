@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Route Captain: slides</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<style>
+  :root { --navy: #00356B; --blue: #286DC0; --sky: #63AAFF; --pale: #BDD5EA; --mist: #EEF4FB; --ink: #1b2a3d; --muted: #5d6f86; }
+  .reveal { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 30px; color: var(--ink); }
+  .reveal .slides { text-align: left; }
+  .reveal h1, .reveal h2, .reveal h3 { font-family: Georgia, "Times New Roman", serif; color: var(--navy); text-transform: none; letter-spacing: -0.01em; }
+  .reveal h1 { font-size: 3em; margin: 0 0 0.12em; }
+  .reveal h2 { font-size: 1.5em; margin: 0 0 0.45em; }
+  .reveal h2::after { content: ""; display: block; width: 90px; height: 6px; border-radius: 3px; margin-top: 10px;
+    background: linear-gradient(90deg, var(--navy), var(--sky)); }
+  .reveal p, .reveal li { line-height: 1.35; }
+  .reveal strong { color: var(--navy); }
+  .reveal img { border: 1px solid #d7e3f0; border-radius: 12px; box-shadow: 0 10px 26px rgba(0, 38, 80, .16); margin: 0; background: white; }
+  .reveal img.plain { border: none; box-shadow: none; background: none; border-radius: 0; }
+  .kicker { color: var(--blue); font-weight: 800; font-size: 0.5em; letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 0.25em; }
+  .pitch { font-size: 1em; color: var(--muted); max-width: 20em; margin-top: 0.4em; }
+  .byline { font-size: 0.62em; color: var(--muted); margin-top: 1.1em; }
+  .row { display: flex; gap: 28px; align-items: flex-start; }
+  .row > * { flex: 1; }
+  .col-58 { flex: 0 0 58%; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .shots figure, .shot { margin: 0; }
+  .shots img, .shot img { width: 100%; }
+  figcaption { font-size: 0.55em; color: var(--muted); margin-top: 8px; line-height: 1.3; }
+  .small { font-size: 0.7em; }
+  .muted { color: var(--muted); }
+  .ico { width: 62px; height: 62px; border-radius: 18px; display: grid; place-items: center; font-size: 34px; flex: none;
+    background: linear-gradient(160deg, #ffffff, var(--mist)); border: 2px solid var(--pale); box-shadow: 0 6px 14px rgba(0, 53, 107, .14); }
+  .ico.light { background: white; box-shadow: 0 4px 12px rgba(0, 38, 80, .12); }
+  .cards4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 0.5em; }
+  .fcard { background: rgba(255,255,255,.94); border: 1px solid #dbe6f2; border-radius: 20px; padding: 20px 18px 18px;
+    box-shadow: 0 10px 24px rgba(0, 38, 80, .10); }
+  .fcard .ico { margin-bottom: 12px; }
+  .fcard b { display: block; color: var(--navy); font-size: 0.72em; line-height: 1.2; margin-bottom: 6px; }
+  .fcard span { display: block; font-size: 0.56em; color: var(--muted); line-height: 1.35; }
+  .iconlist { list-style: none; margin: 0 !important; padding: 0; }
+  .iconlist li { display: flex; gap: 16px; align-items: center; margin: 0 0 14px !important; font-size: 0.7em; }
+  .iconlist .ico { width: 50px; height: 50px; font-size: 26px; border-radius: 14px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0.3em 0 0.6em; }
+  .stats.four { grid-template-columns: repeat(4, 1fr); }
+  .stat { background: rgba(255,255,255,.94); border: 1px solid #dbe6f2; border-radius: 18px; padding: 14px 16px; font-size: 0.6em;
+    color: var(--muted); line-height: 1.3; box-shadow: 0 8px 20px rgba(0, 38, 80, .08); }
+  .stat .em { font-size: 1.5em; display: block; margin-bottom: 4px; }
+  .big { font-size: 2.1em; font-weight: 800; color: var(--navy); line-height: 1; display: block; margin-bottom: 4px; }
+  .card { background: rgba(255,255,255,.94); border: 1px solid #dbe6f2; border-radius: 18px; padding: 18px 20px; box-shadow: 0 8px 20px rgba(0, 38, 80, .08); }
+  .quote { border-left: 6px solid var(--blue); padding: 8px 18px; font-family: Georgia, serif; font-style: italic; font-size: 0.78em;
+    color: var(--ink); background: rgba(238, 244, 251, .95); border-radius: 0 14px 14px 0; }
+  table.cmp { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 0.6em; background: rgba(255,255,255,.94);
+    border-radius: 14px; overflow: hidden; box-shadow: 0 8px 20px rgba(0, 38, 80, .08); }
+  table.cmp th { background: var(--navy); color: white; text-align: left; padding: 8px 14px; border: none; }
+  table.cmp td { padding: 7px 14px; border-bottom: 1px solid #e3ecf6; vertical-align: top; }
+  table.cmp tr:last-child td { border-bottom: none; }
+  .diagram { width: 78%; margin: 0 auto; background: rgba(255,255,255,.88); border-radius: 18px; padding: 8px 10px; }
+  .diagram svg { width: 100%; height: auto; display: block; }
+  .reveal .progress { color: var(--blue); height: 5px; }
+  .reveal .slide-number { background: var(--navy); color: white; font-size: 16px; border-radius: 8px 0 0 0; }
+  .reveal .controls { color: var(--blue); }
+  .cover-art { position: relative; height: 430px; }
+  .cover-art svg.trail { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .cover-art img.mascot { position: absolute; left: 2%; bottom: 18px; width: 300px; filter: drop-shadow(0 14px 18px rgba(0, 38, 80, .22)); }
+  .chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 0.9em; }
+  .chip { font-size: 0.5em; font-weight: 700; color: var(--navy); background: white; border: 1px solid #dbe6f2; border-radius: 999px; padding: 6px 14px; box-shadow: 0 4px 10px rgba(0, 38, 80, .07); }
+</style>
+</head>
+<body>
+<div class="reveal"><div class="slides">
+
+<!-- 1. TITLE -->
+<section>
+  <div class="row" style="align-items:center">
+    <div class="col-58">
+      <div class="kicker">AI Foundations · Final project</div>
+      <h1>Route Captain</h1>
+      <p class="pitch">A team of AI agents that plans a safe running route at the right distance, with stops that are open when you arrive, what to wear, and pacing for every hill.</p>
+      <div class="chips"><span class="chip">🏃 Solo runs</span><span class="chip">🏃‍♀️🏃 Run clubs</span><span class="chip">🇺🇸 Anywhere in the US</span></div>
+      <p class="byline">Caroline Tian · Yale · Fall 2026</p>
+    </div>
+    <div class="cover-art">
+      <svg class="trail" viewBox="0 0 460 430" aria-hidden="true">
+        <path d="M70 360 C 140 330, 120 250, 210 236 S 330 230, 330 160 S 360 80, 410 64" fill="none" stroke="#00356B" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 16"/>
+        <path d="M262 232 C 300 226, 330 200, 330 160" fill="none" stroke="#63AAFF" stroke-width="7" stroke-linecap="round" stroke-dasharray="2 16"/>
+        <circle cx="410" cy="64" r="9" fill="#00356B" stroke="white" stroke-width="4"/>
+        <line x1="410" y1="64" x2="410" y2="18" stroke="#00356B" stroke-width="4" stroke-linecap="round"/>
+        <path d="M410 18 h34 l-9 10 l9 10 h-34 Z" fill="#286DC0"/>
+      </svg>
+      <img class="plain mascot" src="img/mascot.svg" alt="Route Captain's running-shoe mascot">
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROBLEM -->
+<section>
+  <div class="kicker">01 · The problem</div>
+  <h2>Planning a good run is a chore</h2>
+  <div class="row">
+    <div class="col-58">
+      <p class="small"><strong>Who:</strong> about 50 million Americans run<sup>1</sup>, and run clubs grew 59% in 2024<sup>2</sup>.</p>
+      <p class="small"><strong>Today:</strong> they repeat the same loop, drag a line on a map app, or improvise. A line on a map doesn't answer:</p>
+      <ul class="iconlist">
+        <li><span class="ico light">🛡️</span>Is it safe? Busy roads, unmarked crossings, dark before I'm back?</li>
+        <li><span class="ico light">🥐</span>Will the café I want to end at be open when I get there?</li>
+        <li><span class="ico light">⛰️</span>What should I wear, and how hard should I push on the hills?</li>
+        <li><span class="ico light">🏃</span>For a club: when does each pace group reach the meetup?</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card"><span class="big">7,148</span><span class="small muted">pedestrians killed by drivers in the US in 2024, nearly 20% more than in 2016<sup>3</sup></span></div>
+      <p class="small muted" style="margin-top:0.8em">The cost is time and frustration, plus risk: most people skip the checks and run an unchecked route.</p>
+    </div>
+  </div>
+  <p class="muted" style="font-size:0.38em;margin-top:0.2em">1 SFIA estimate via Garage Gym Reviews · 2 Strava Year in Sport 2024 via GearJunkie · 3 Governors Highway Safety Association</p>
+</section>
+
+<!-- 3. WHAT IS NEW -->
+<section>
+  <div class="kicker">02 · What's new</div>
+  <h2>Four things no other app I checked does</h2>
+  <div class="cards4">
+    <div class="fcard"><div class="ico">🥐</div><b>Open when you arrive</b><span>Stops are chosen because they'll be open at your arrival time.</span></div>
+    <div class="fcard"><div class="ico">✨</div><b>"Surprise me"</b><span>A real destination picked from your interests, at the right distance.</span></div>
+    <div class="fcard"><div class="ico">📅</div><b>Fits before your next event</b><span>Reads your calendar and sizes the run so you're back in time.</span></div>
+    <div class="fcard"><div class="ico">🏃</div><b>Run club plans</b><span>Each pace group's hill pacing and arrival time at the meetup.</span></div>
+  </div>
+  <table class="cmp" style="margin-top:0.9em">
+    <tr><th>Already exists</th><th>What it does</th><th>Route Captain adds</th></tr>
+    <tr><td><strong>Strava, Garmin</strong></td><td>Routes or loops of a distance, one athlete</td><td>Safety check, outfit, hill pacing, a reason for the route</td></tr>
+    <tr><td><strong>Run club apps</strong></td><td>RSVPs, schedules, pace groups</td><td>Each group's own plan and arrival time</td></tr>
+    <tr><td><strong>ChatGPT alone</strong></td><td>Describes a route in words</td><td>Real streets; code calculates every number</td></tr>
+  </table>
+</section>
+
+<!-- 4. AGENTS -->
+<section>
+  <div class="kicker">03 · How it works</div>
+  <h2>A team of agents, checked by code</h2>
+  <p class="small" style="margin-bottom:0.3em"><strong>10 AI agents</strong> (gpt-6-luna) plus ordinary code. The rule: <strong>AI reads, chooses and explains; code calculates every number.</strong></p>
+  <div class="diagram"><!--DIAGRAM--></div>
+  <p class="muted" style="font-size:0.42em;margin:6px 0 0">Read left to right in four stages. The safety check can reject a stop and send the Stops Scout back; the writers in stage 4 work at the same time.</p>
+</section>
+
+<!-- 5. DEMO: ONE RUN -->
+<section>
+  <div class="kicker">04 · Demo</div>
+  <h2>One run, about 11 seconds</h2>
+  <p class="small" style="margin-bottom:0.4em">5 miles from Cross Campus, stop at a bakery and pass water, finish at the bakery, Saturday 9 AM.</p>
+  <div class="row">
+    <figure class="shot col-58"><img src="img/05-results.jpg" alt="Finished plan"><figcaption>The plan: 5.06 mi to a bakery that's open when you arrive, a water fountain on the way, safety score 78, hills and crossings on the map.</figcaption></figure>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <figure class="shot"><img src="img/03-answers.jpg" alt="Answers" style="height:170px;width:100%;object-fit:cover;object-position:top"><figcaption>Six quick questions; click any answer to change it.</figcaption></figure>
+      <figure class="shot"><img src="img/04-planning.jpg" alt="Planning screen" style="height:170px;width:100%;object-fit:cover;object-position:50% 18%"><figcaption>Live progress from each agent while it plans.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 6. DEMO: MORE -->
+<section>
+  <div class="kicker">04 · Demo</div>
+  <h2>Run clubs, surprises, live guidance</h2>
+  <div class="shots">
+    <figure><img src="img/10-club-tab.jpg" alt="Run club tab"><figcaption>🏃 Run club: each pace group's hill pace and arrival time at the meetup.</figcaption></figure>
+    <figure><img src="img/11-surprise.jpg" alt="Surprise me"><figcaption>✨ "Surprise me: views and water" picks the Waterfront, 5.15 mi away.</figcaption></figure>
+    <figure><img src="img/13-start-run.jpg" alt="Start run"><figcaption>📍 Start run: live position, next turn, distance and pace.</figcaption></figure>
+  </div>
+</section>
+
+<!-- 7. COST -->
+<section>
+  <div class="kicker">05 · Cost to run</div>
+  <h2>About a tenth of a cent per plan</h2>
+  <div class="stats four">
+    <div class="stat"><span class="em">💵</span><span class="big">$0.001</span>per plan (median, measured on 8 real requests)</div>
+    <div class="stat"><span class="em">⏱️</span><span class="big">11.2 s</span>per plan, 5 to 7 AI calls</div>
+    <div class="stat"><span class="em">🔤</span><span class="big">3,908</span>tokens read and 1,170 written per plan (median)</div>
+    <div class="stat"><span class="em">♻️</span><span class="big">$0</span>for an identical repeat (served from cache, 2.8 s)</div>
+  </div>
+  <div class="row">
+    <div>
+      <p class="small" style="margin-bottom:0.3em"><strong>At scale</strong> (estimate: 12 plans + 4 best-time lookups a month):</p>
+      <table class="cmp"><tr><th>Users</th><th>AI cost per month</th></tr>
+        <tr><td>1 runner</td><td>$0.013</td></tr><tr><td>100 runners</td><td>$1.27</td></tr><tr><td>10,000 runners</td><td>$127</td></tr></table>
+    </div>
+    <div class="card">
+      <p class="small" style="margin:0"><strong>Did cutting cost hurt quality?</strong> Removing the Navigator agent would have: with a stated preference it picked the best route <strong>15 of 16</strong> times, vs <strong>6 of 16</strong> for code alone. So it stays, and is skipped only when there's no note (code matched it <strong>14 of 14</strong> times), saving about $0.00012 per plan.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. SAFETY -->
+<section>
+  <div class="kicker">06 · Safety</div>
+  <h2>Safe by design</h2>
+  <div class="row">
+    <div class="col-58">
+      <ul class="iconlist">
+        <li><span class="ico">🛡️</span><span><strong>Hidden instructions in map data:</strong> a code Guard quarantines suspicious places before any agent sees them. <strong>5 of 5</strong> planted attacks caught.</span></li>
+        <li><span class="ico">🧮</span><span><strong>No made-up facts:</strong> distances, safety, hours, hills and times come from code; agents that choose can only pick from lists.</span></li>
+        <li><span class="ico">✋</span><span><strong>No surprise actions:</strong> email and calendar open as drafts you approve; event names never reach the AI.</span></li>
+        <li><span class="ico">💰</span><span><strong>No runaway spending:</strong> 3 tries and 15,000 tokens per AI call, 20 plans an hour, $1 of AI a day. Tests show each one working.</span></li>
+      </ul>
+    </div>
+    <div class="shot"><img src="img/12-quarantine.jpg" alt="Quarantined places"><figcaption>All 5 planted places quarantined; the plan goes ahead safely.</figcaption></div>
+  </div>
+</section>
+
+<!-- 9. IMPACT -->
+<section>
+  <div class="kicker">07 · Impact</div>
+  <h2>The numbers</h2>
+  <div class="row">
+    <div class="col-58">
+      <div class="stats">
+        <div class="stat"><span class="em">⏱️</span><span class="big">30 s</span>to plan a run in Maine, a town the runners had never been to</div>
+        <div class="stat"><span class="em">📏</span><span class="big">497/497</span>New Haven test routes within 5% of the distance</div>
+        <div class="stat"><span class="em">✅</span><span class="big">18/18</span>full runs with the real AI pass</div>
+      </div>
+      <p class="small"><strong>Real trial:</strong> friends in Bernard, Maine ran from where they were staying to Clark Point Cafe for breakfast, and walked a Cadillac Mountain ridge trail with the elevation planned.</p>
+      <p class="quote">"It was especially helpful to know what sections and areas are more or very hilly to make sure that I could pace myself accordingly and take extra precaution for my foot."</p>
+      <p class="muted" style="font-size:0.42em">A runner recovering from a broken foot</p>
+    </div>
+    <div class="shot"><img src="img/16-maine-recreation.jpg" alt="Maine run re-created"><figcaption>🥯 The Maine breakfast run, re-created in the app afterward.</figcaption></div>
+  </div>
+</section>
+
+<!-- 10. NEXT -->
+<section>
+  <div class="kicker">08 · What's next</div>
+  <h2>Where it goes from here</h2>
+  <ul class="iconlist" style="font-size:1.12em">
+    <li><span class="ico">📶</span><span><strong>Offline mode:</strong> guidance cut out on the trail without service. Save the map and turns to the phone first.</span></li>
+    <li><span class="ico">🌐</span><span><strong>Put it online</strong> with accounts and saved routes; send routes to Strava and Garmin watches.</span></li>
+    <li><span class="ico">🏃</span><span><strong>Run club sharing:</strong> one link, RSVPs, each runner's group plan on their phone.</span></li>
+    <li><span class="ico">🗺️</span><span><strong>Better safety data:</strong> runner reports of dark stretches and risky crossings, plus city crash data.</span></li>
+    <li><span class="ico">🧪</span><span><strong>A bigger, timed trial</strong> with several run clubs.</span></li>
+  </ul>
+  <p class="small muted" style="margin-top:0.5em">Repository: <a href="https://github.com/carolineywtian/route-captain">github.com/carolineywtian/route-captain</a> · Report: report/report.pdf</p>
+</section>
+
+</div></div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true, slideNumber: "c/t", width: 1280, height: 720, margin: 0.05, transition: "slide", center: true,
+    // soft hills, pines and a trail along the bottom, drifting gently as the slides advance
+    parallaxBackgroundImage: "img/landscape.svg", parallaxBackgroundSize: "2560px 720px", parallaxBackgroundHorizontal: 140,
+  });
+</script>
+</body>
+</html>

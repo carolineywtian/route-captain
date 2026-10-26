@@ -1,0 +1,1259 @@
+{
+ "model": "gpt-6-luna",
+ "generated": "2026-10-26T09:19",
+ "prices_per_1m": {
+  "input_per_1m": 0.1,
+  "cached_input_per_1m": 0.01,
+  "output_per_1m": 0.5
+ },
+ "fresh": {
+  "input_tokens": 3908.0,
+  "cached_input_tokens": 0.0,
+  "output_tokens": 1170.5,
+  "requests": 5.5,
+  "portkey_cache_hits": 0.0,
+  "cost_usd": 0.0009787,
+  "billed_cost_usd": 0.0009786999999999999,
+  "seconds": 11.2,
+  "mean_cost_usd": 0.001016175,
+  "max_cost_usd": 0.0015093,
+  "mean_billed_cost_usd": 0.001016175
+ },
+ "repeat": {
+  "input_tokens": 3908.0,
+  "cached_input_tokens": 0.0,
+  "output_tokens": 1170.5,
+  "requests": 5.5,
+  "portkey_cache_hits": 5.5,
+  "cost_usd": 0.0009787,
+  "billed_cost_usd": 0.0,
+  "seconds": 2.75,
+  "mean_cost_usd": 0.0010241125,
+  "max_cost_usd": 0.0015093,
+  "mean_billed_cost_usd": 0.0
+ },
+ "per_agent_fresh_mean": {
+  "Planner": {
+   "input_tokens": 723,
+   "cached_input_tokens": 0,
+   "output_tokens": 79,
+   "requests": 1,
+   "runs": 8,
+   "max_input_tokens": 728,
+   "max_output_tokens": 228,
+   "mean_cost_usd": 0.00011197500000000001
+  },
+  "Weather agent": {
+   "input_tokens": 414,
+   "cached_input_tokens": 0,
+   "output_tokens": 68,
+   "requests": 1,
+   "runs": 8,
+   "max_input_tokens": 414,
+   "max_output_tokens": 68,
+   "mean_cost_usd": 7.515000000000001e-05
+  },
+  "Pacing agent": {
+   "input_tokens": 681,
+   "cached_input_tokens": 0,
+   "output_tokens": 279,
+   "requests": 1,
+   "runs": 8,
+   "max_input_tokens": 952,
+   "max_output_tokens": 377,
+   "mean_cost_usd": 0.0002074875
+  },
+  "Calendar agent": {
+   "input_tokens": 544,
+   "cached_input_tokens": 0,
+   "output_tokens": 198,
+   "requests": 1,
+   "runs": 8,
+   "max_input_tokens": 638,
+   "max_output_tokens": 322,
+   "mean_cost_usd": 0.0001535625
+  },
+  "Briefing Writer": {
+   "input_tokens": 1222,
+   "cached_input_tokens": 0,
+   "output_tokens": 434,
+   "requests": 1,
+   "runs": 8,
+   "max_input_tokens": 1529,
+   "max_output_tokens": 654,
+   "mean_cost_usd": 0.0003390375
+  },
+  "Stops Scout": {
+   "input_tokens": 682,
+   "cached_input_tokens": 0,
+   "output_tokens": 177,
+   "requests": 1,
+   "runs": 3,
+   "max_input_tokens": 688,
+   "max_output_tokens": 208,
+   "mean_cost_usd": 0.00015686666666666667
+  },
+  "Destination agent": {
+   "input_tokens": 2052,
+   "cached_input_tokens": 0,
+   "output_tokens": 127,
+   "requests": 1,
+   "runs": 1,
+   "max_input_tokens": 2052,
+   "max_output_tokens": 127,
+   "mean_cost_usd": 0.0002687
+  },
+  "Run Club Captain": {
+   "input_tokens": 684,
+   "cached_input_tokens": 0,
+   "output_tokens": 448,
+   "requests": 1,
+   "runs": 1,
+   "max_input_tokens": 684,
+   "max_output_tokens": 448,
+   "mean_cost_usd": 0.00029239999999999995
+  }
+ },
+ "runs": [
+  {
+   "label": "5 mi loop",
+   "ok": true,
+   "seconds": 10.5,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 717,
+     "cached_input_tokens": 0,
+     "output_tokens": 43,
+     "cost_usd": 9.32e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.32e-05
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.54e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 711,
+     "cached_input_tokens": 0,
+     "output_tokens": 229,
+     "cost_usd": 0.0001856,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001856
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 520,
+     "cached_input_tokens": 0,
+     "output_tokens": 178,
+     "cost_usd": 0.000141,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.000141
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1078,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001988,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001988
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3440,
+   "cached_input_tokens": 0,
+   "output_tokens": 700,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.000694,
+   "billed_cost_usd": 0.0006940000000000001,
+   "pass": "fresh"
+  },
+  {
+   "label": "5 mi loop",
+   "ok": true,
+   "seconds": 3.5,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 717,
+     "cached_input_tokens": 0,
+     "output_tokens": 43,
+     "cost_usd": 9.32e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 711,
+     "cached_input_tokens": 0,
+     "output_tokens": 313,
+     "cost_usd": 0.00022760000000000003,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 520,
+     "cached_input_tokens": 0,
+     "output_tokens": 178,
+     "cost_usd": 0.000141,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1078,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001988,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3440,
+   "cached_input_tokens": 0,
+   "output_tokens": 784,
+   "portkey_cache_hits": 5,
+   "cost_usd": 0.000736,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "5 mi ending at a bakery",
+   "ok": true,
+   "seconds": 12.2,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 720,
+     "cached_input_tokens": 0,
+     "output_tokens": 37,
+     "cost_usd": 9.05e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.05e-05
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 679,
+     "cached_input_tokens": 0,
+     "output_tokens": 208,
+     "cost_usd": 0.0001719,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001719
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.54e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 709,
+     "cached_input_tokens": 0,
+     "output_tokens": 354,
+     "cost_usd": 0.0002479,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0002479
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 589,
+     "cached_input_tokens": 0,
+     "output_tokens": 180,
+     "cost_usd": 0.00014890000000000001,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00014890000000000001
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1264,
+     "cached_input_tokens": 0,
+     "output_tokens": 479,
+     "cost_usd": 0.0003659,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0003659
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 4375,
+   "cached_input_tokens": 0,
+   "output_tokens": 1326,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.0011005,
+   "billed_cost_usd": 0.0011005000000000001,
+   "pass": "fresh"
+  },
+  {
+   "label": "5 mi ending at a bakery",
+   "ok": true,
+   "seconds": 3.7,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 720,
+     "cached_input_tokens": 0,
+     "output_tokens": 37,
+     "cost_usd": 9.05e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 679,
+     "cached_input_tokens": 0,
+     "output_tokens": 208,
+     "cost_usd": 0.0001719,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 709,
+     "cached_input_tokens": 0,
+     "output_tokens": 354,
+     "cost_usd": 0.0002479,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 589,
+     "cached_input_tokens": 0,
+     "output_tokens": 180,
+     "cost_usd": 0.00014890000000000001,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1264,
+     "cached_input_tokens": 0,
+     "output_tokens": 479,
+     "cost_usd": 0.0003659,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 4375,
+   "cached_input_tokens": 0,
+   "output_tokens": 1326,
+   "portkey_cache_hits": 6,
+   "cost_usd": 0.0011005,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "4 mi, coffee halfway",
+   "ok": true,
+   "seconds": 11.7,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 728,
+     "cached_input_tokens": 0,
+     "output_tokens": 53,
+     "cost_usd": 9.93e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.93e-05
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 688,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001598,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001598
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.54e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 952,
+     "cached_input_tokens": 0,
+     "output_tokens": 283,
+     "cost_usd": 0.00023669999999999998,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00023669999999999998
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 594,
+     "cached_input_tokens": 0,
+     "output_tokens": 244,
+     "cost_usd": 0.00018140000000000002,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00018140000000000002
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1128,
+     "cached_input_tokens": 0,
+     "output_tokens": 432,
+     "cost_usd": 0.0003288,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0003288
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 4504,
+   "cached_input_tokens": 0,
+   "output_tokens": 1262,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.0010814000000000002,
+   "billed_cost_usd": 0.0010814,
+   "pass": "fresh"
+  },
+  {
+   "label": "4 mi, coffee halfway",
+   "ok": true,
+   "seconds": 2.1,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 728,
+     "cached_input_tokens": 0,
+     "output_tokens": 53,
+     "cost_usd": 9.93e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 688,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001598,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 952,
+     "cached_input_tokens": 0,
+     "output_tokens": 283,
+     "cost_usd": 0.00023669999999999998,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 594,
+     "cached_input_tokens": 0,
+     "output_tokens": 244,
+     "cost_usd": 0.00018140000000000002,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1128,
+     "cached_input_tokens": 0,
+     "output_tokens": 432,
+     "cost_usd": 0.0003288,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 4504,
+   "cached_input_tokens": 0,
+   "output_tokens": 1262,
+   "portkey_cache_hits": 6,
+   "cost_usd": 0.0010814000000000002,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "6 mi out & back + water",
+   "ok": true,
+   "seconds": 10.7,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 727,
+     "cached_input_tokens": 0,
+     "output_tokens": 58,
+     "cost_usd": 0.0001017,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001017
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.49e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 431,
+     "cached_input_tokens": 0,
+     "output_tokens": 157,
+     "cost_usd": 0.00012159999999999999,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00012159999999999999
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 483,
+     "cached_input_tokens": 0,
+     "output_tokens": 143,
+     "cost_usd": 0.00011980000000000001,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00011980000000000001
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1310,
+     "cached_input_tokens": 0,
+     "output_tokens": 654,
+     "cost_usd": 0.000458,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.000458
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3365,
+   "cached_input_tokens": 0,
+   "output_tokens": 1079,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.000876,
+   "billed_cost_usd": 0.000876,
+   "pass": "fresh"
+  },
+  {
+   "label": "6 mi out & back + water",
+   "ok": true,
+   "seconds": 2.1,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 727,
+     "cached_input_tokens": 0,
+     "output_tokens": 58,
+     "cost_usd": 0.0001017,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 431,
+     "cached_input_tokens": 0,
+     "output_tokens": 157,
+     "cost_usd": 0.00012159999999999999,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 483,
+     "cached_input_tokens": 0,
+     "output_tokens": 143,
+     "cost_usd": 0.00011980000000000001,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1310,
+     "cached_input_tokens": 0,
+     "output_tokens": 654,
+     "cost_usd": 0.000458,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3365,
+   "cached_input_tokens": 0,
+   "output_tokens": 1079,
+   "portkey_cache_hits": 5,
+   "cost_usd": 0.000876,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "4 mi to East Rock Summit",
+   "ok": true,
+   "seconds": 9.0,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 728,
+     "cached_input_tokens": 0,
+     "output_tokens": 140,
+     "cost_usd": 0.0001428,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001428
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.49e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 714,
+     "cached_input_tokens": 0,
+     "output_tokens": 350,
+     "cost_usd": 0.0002464,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0002464
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 523,
+     "cached_input_tokens": 0,
+     "output_tokens": 165,
+     "cost_usd": 0.00013480000000000002,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00013480000000000002
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1062,
+     "cached_input_tokens": 0,
+     "output_tokens": 256,
+     "cost_usd": 0.0002342,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0002342
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3441,
+   "cached_input_tokens": 0,
+   "output_tokens": 978,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.0008331,
+   "billed_cost_usd": 0.0008331,
+   "pass": "fresh"
+  },
+  {
+   "label": "4 mi to East Rock Summit",
+   "ok": true,
+   "seconds": 2.2,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 728,
+     "cached_input_tokens": 0,
+     "output_tokens": 140,
+     "cost_usd": 0.0001428,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 110,
+     "cost_usd": 9.640000000000001e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 714,
+     "cached_input_tokens": 0,
+     "output_tokens": 350,
+     "cost_usd": 0.0002464,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 523,
+     "cached_input_tokens": 0,
+     "output_tokens": 165,
+     "cost_usd": 0.00013480000000000002,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1062,
+     "cached_input_tokens": 0,
+     "output_tokens": 256,
+     "cost_usd": 0.0002342,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3441,
+   "cached_input_tokens": 0,
+   "output_tokens": 1021,
+   "portkey_cache_hits": 5,
+   "cost_usd": 0.0008546000000000001,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "5 mi surprise (street art)",
+   "ok": true,
+   "seconds": 15.5,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 726,
+     "cached_input_tokens": 0,
+     "output_tokens": 228,
+     "cost_usd": 0.00018660000000000004,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00018660000000000004
+    },
+    {
+     "agent": "Destination agent",
+     "requests": 1,
+     "input_tokens": 2052,
+     "cached_input_tokens": 0,
+     "output_tokens": 127,
+     "cost_usd": 0.0002687,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0002687
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.49e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 870,
+     "cached_input_tokens": 0,
+     "output_tokens": 356,
+     "cost_usd": 0.000265,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.000265
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 527,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001437,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001437
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1301,
+     "cached_input_tokens": 0,
+     "output_tokens": 442,
+     "cost_usd": 0.0003511,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0003511
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 5890,
+   "cached_input_tokens": 0,
+   "output_tokens": 1402,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.00129,
+   "billed_cost_usd": 0.0012900000000000001,
+   "pass": "fresh"
+  },
+  {
+   "label": "5 mi surprise (street art)",
+   "ok": true,
+   "seconds": 3.3,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 726,
+     "cached_input_tokens": 0,
+     "output_tokens": 228,
+     "cost_usd": 0.00018660000000000004,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Destination agent",
+     "requests": 1,
+     "input_tokens": 2052,
+     "cached_input_tokens": 0,
+     "output_tokens": 127,
+     "cost_usd": 0.0002687,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 870,
+     "cached_input_tokens": 0,
+     "output_tokens": 356,
+     "cost_usd": 0.000265,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 527,
+     "cached_input_tokens": 0,
+     "output_tokens": 182,
+     "cost_usd": 0.0001437,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1301,
+     "cached_input_tokens": 0,
+     "output_tokens": 442,
+     "cost_usd": 0.0003511,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 6,
+   "input_tokens": 5890,
+   "cached_input_tokens": 0,
+   "output_tokens": 1402,
+   "portkey_cache_hits": 6,
+   "cost_usd": 0.00129,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "Run club, 3 groups, bakery",
+   "ok": true,
+   "seconds": 12.8,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 720,
+     "cached_input_tokens": 0,
+     "output_tokens": 37,
+     "cost_usd": 9.05e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.05e-05
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 679,
+     "cached_input_tokens": 0,
+     "output_tokens": 142,
+     "cost_usd": 0.00013890000000000002,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00013890000000000002
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.49e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 709,
+     "cached_input_tokens": 0,
+     "output_tokens": 377,
+     "cost_usd": 0.00025939999999999996,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00025939999999999996
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 638,
+     "cached_input_tokens": 0,
+     "output_tokens": 322,
+     "cost_usd": 0.00022480000000000002,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00022480000000000002
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1529,
+     "cached_input_tokens": 0,
+     "output_tokens": 551,
+     "cost_usd": 0.00042839999999999995,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00042839999999999995
+    },
+    {
+     "agent": "Run Club Captain",
+     "requests": 1,
+     "input_tokens": 684,
+     "cached_input_tokens": 0,
+     "output_tokens": 448,
+     "cost_usd": 0.00029239999999999995,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00029239999999999995
+    }
+   ],
+   "requests": 7,
+   "input_tokens": 5373,
+   "cached_input_tokens": 0,
+   "output_tokens": 1944,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.0015093,
+   "billed_cost_usd": 0.0015092999999999999,
+   "pass": "fresh"
+  },
+  {
+   "label": "Run club, 3 groups, bakery",
+   "ok": true,
+   "seconds": 3.6,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 720,
+     "cached_input_tokens": 0,
+     "output_tokens": 37,
+     "cost_usd": 9.05e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Stops Scout",
+     "requests": 1,
+     "input_tokens": 679,
+     "cached_input_tokens": 0,
+     "output_tokens": 142,
+     "cost_usd": 0.00013890000000000002,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 67,
+     "cost_usd": 7.49e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 709,
+     "cached_input_tokens": 0,
+     "output_tokens": 377,
+     "cost_usd": 0.00025939999999999996,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 638,
+     "cached_input_tokens": 0,
+     "output_tokens": 322,
+     "cost_usd": 0.00022480000000000002,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1529,
+     "cached_input_tokens": 0,
+     "output_tokens": 551,
+     "cost_usd": 0.00042839999999999995,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Run Club Captain",
+     "requests": 1,
+     "input_tokens": 684,
+     "cached_input_tokens": 0,
+     "output_tokens": 448,
+     "cost_usd": 0.00029239999999999995,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 7,
+   "input_tokens": 5373,
+   "cached_input_tokens": 0,
+   "output_tokens": 1944,
+   "portkey_cache_hits": 7,
+   "cost_usd": 0.0015093,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  },
+  {
+   "label": "3 mi loop",
+   "ok": true,
+   "seconds": 9.2,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 717,
+     "cached_input_tokens": 0,
+     "output_tokens": 39,
+     "cost_usd": 9.120000000000001e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.120000000000001e-05
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 7.54e-05
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 353,
+     "cached_input_tokens": 0,
+     "output_tokens": 124,
+     "cost_usd": 9.730000000000001e-05,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 9.730000000000001e-05
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 481,
+     "cached_input_tokens": 0,
+     "output_tokens": 172,
+     "cost_usd": 0.0001341,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.0001341
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1106,
+     "cached_input_tokens": 0,
+     "output_tokens": 473,
+     "cost_usd": 0.00034710000000000003,
+     "portkey_cache_hits": 0,
+     "billed_cost_usd": 0.00034710000000000003
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3071,
+   "cached_input_tokens": 0,
+   "output_tokens": 876,
+   "portkey_cache_hits": 0,
+   "cost_usd": 0.0007451000000000001,
+   "billed_cost_usd": 0.0007451000000000001,
+   "pass": "fresh"
+  },
+  {
+   "label": "3 mi loop",
+   "ok": true,
+   "seconds": 2.1,
+   "agents": [
+    {
+     "agent": "Planner",
+     "requests": 1,
+     "input_tokens": 717,
+     "cached_input_tokens": 0,
+     "output_tokens": 39,
+     "cost_usd": 9.120000000000001e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Weather agent",
+     "requests": 1,
+     "input_tokens": 414,
+     "cached_input_tokens": 0,
+     "output_tokens": 68,
+     "cost_usd": 7.54e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Pacing agent",
+     "requests": 1,
+     "input_tokens": 353,
+     "cached_input_tokens": 0,
+     "output_tokens": 124,
+     "cost_usd": 9.730000000000001e-05,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Calendar agent",
+     "requests": 1,
+     "input_tokens": 481,
+     "cached_input_tokens": 0,
+     "output_tokens": 172,
+     "cost_usd": 0.0001341,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    },
+    {
+     "agent": "Briefing Writer",
+     "requests": 1,
+     "input_tokens": 1106,
+     "cached_input_tokens": 0,
+     "output_tokens": 473,
+     "cost_usd": 0.00034710000000000003,
+     "portkey_cache_hits": 1,
+     "billed_cost_usd": 0.0
+    }
+   ],
+   "requests": 5,
+   "input_tokens": 3071,
+   "cached_input_tokens": 0,
+   "output_tokens": 876,
+   "portkey_cache_hits": 5,
+   "cost_usd": 0.0007451000000000001,
+   "billed_cost_usd": 0.0,
+   "pass": "repeat"
+  }
+ ]
+}

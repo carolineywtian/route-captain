@@ -1,0 +1,4 @@
+# Only for re-downloading the OpenStreetMap snapshot (scripts/download_map.py and
+# scripts/build_compact_graph.py). Not needed to run or grade the app.
+-r requirements.txt
+osmnx>=2.0

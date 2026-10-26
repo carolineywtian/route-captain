@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 720" width="2560" height="720" preserveAspectRatio="none">
+  <defs>
+    <g id="pine">
+      <path d="M0 0 L-16 30 L-7 30 L-20 54 L-9 54 L-24 80 L24 80 L9 54 L20 54 L7 30 L16 30 Z"/>
+      <rect x="-3" y="80" width="6" height="12"/>
+    </g>
+  </defs>
+  <!-- far hills -->
+  <path d="M0 600 C 180 540, 360 545, 520 585 S 860 520, 1060 560 S 1420 600, 1600 548 S 1980 520, 2160 570 S 2440 560, 2560 540 L2560 720 L0 720 Z" fill="#EEF4FB"/>
+  <!-- far pines -->
+  <g fill="#DCE8F5">
+    <use href="#pine" transform="translate(300 520) scale(0.9)"/><use href="#pine" transform="translate(340 532) scale(0.7)"/>
+    <use href="#pine" transform="translate(1180 500) scale(0.85)"/><use href="#pine" transform="translate(1215 512) scale(0.65)"/>
+    <use href="#pine" transform="translate(1900 505) scale(0.9)"/><use href="#pine" transform="translate(1940 520) scale(0.7)"/><use href="#pine" transform="translate(1870 522) scale(0.6)"/>
+  </g>
+  <!-- near hills -->
+  <path d="M0 655 C 220 610, 420 630, 640 650 S 1040 600, 1300 632 S 1700 676, 1940 628 S 2360 618, 2560 646 L2560 720 L0 720 Z" fill="#E1ECF8"/>
+  <!-- trail -->
+  <path d="M-20 700 C 240 660, 420 690, 640 668 S 1060 640, 1300 662 S 1720 700, 1960 664 S 2380 650, 2580 676" fill="none" stroke="#BDD5EA" stroke-width="5" stroke-dasharray="16 14" stroke-linecap="round"/>
+  <!-- near pines -->
+  <g fill="#CFDFF1">
+    <use href="#pine" transform="translate(120 580)"/><use href="#pine" transform="translate(165 598) scale(0.75)"/>
+    <use href="#pine" transform="translate(820 572) scale(0.95)"/><use href="#pine" transform="translate(862 590) scale(0.7)"/><use href="#pine" transform="translate(790 596) scale(0.6)"/>
+    <use href="#pine" transform="translate(1560 590) scale(0.9)"/><use href="#pine" transform="translate(1600 604) scale(0.65)"/>
+    <use href="#pine" transform="translate(2300 570)"/><use href="#pine" transform="translate(2345 590) scale(0.75)"/><use href="#pine" transform="translate(2265 596) scale(0.6)"/>
+  </g>
+</svg>

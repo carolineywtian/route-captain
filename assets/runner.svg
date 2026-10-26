@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <style>
+    .limb { stroke: #00356b; stroke-width: 7; stroke-linecap: round; fill: none; }
+    .far { stroke: #6aa6dc; }
+    .body { animation: bob .5s ease-in-out infinite; transform-origin: 60px 60px; }
+    .a1 { transform-origin: 62px 44px; transform: rotate(-50deg); animation: swing .5s ease-in-out infinite; }
+    .a2 { transform-origin: 62px 44px; transform: rotate(50deg); animation: swing .5s ease-in-out -.25s infinite; }
+    .l1 { transform-origin: 56px 68px; transform: rotate(-38deg); animation: stride .5s ease-in-out infinite; }
+    .l2 { transform-origin: 56px 68px; transform: rotate(38deg); animation: stride .5s ease-in-out -.25s infinite; }
+    @keyframes swing { 0%, 100% { transform: rotate(-50deg); } 50% { transform: rotate(50deg); } }
+    @keyframes stride { 0%, 100% { transform: rotate(-38deg); } 50% { transform: rotate(38deg); } }
+    @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
+  </style>
+  <g class="body">
+    <path class="limb far a2" d="M62 44 L60 58 L68 66"/>
+    <path class="limb far l2" d="M56 68 L58 86 L52 100"/>
+    <line class="limb" x1="62" y1="40" x2="56" y2="68"/>
+    <circle cx="66" cy="26" r="9" fill="#00356b"/>
+    <path class="limb a1" d="M62 44 L60 58 L68 66"/>
+    <path class="limb l1" d="M56 68 L58 86 L52 100"/>
+  </g>
+</svg>

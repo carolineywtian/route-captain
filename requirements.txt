@@ -1,0 +1,20 @@
+# Everything needed to run the app and the tests (no map API keys, no GIS libraries). Python 3.11+.
+# The web and AI packages are pinned to the versions the app was tested with, so a fresh
+# install behaves the same; the rest only need a minimum version.
+dash==4.4.1
+dash-leaflet==1.1.3
+plotly==7.1.0
+pydantic==2.14.1
+pydantic-ai-slim[openai]==2.60.0
+openai==3.35.1
+networkx>=3.4
+numpy>=2.0
+python-dotenv>=1.0
+astral>=3.2
+requests>=2.31
+qrcode>=8.0
+cryptography>=42  # phone mode (https) only
+icalendar>=6.0
+recurring-ical-events>=3.0
+tzdata; sys_platform == "win32"
+pytest>=8.0

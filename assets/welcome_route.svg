@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" width="360" height="300" aria-hidden="true">
+  <style>
+    .route { stroke-dasharray: 760; stroke-dashoffset: 760; animation: draw 2.2s .3s ease-out forwards; }
+    .pin { opacity: 0; animation: pop .4s ease-out forwards; }
+    .finish { animation-delay: 2.3s; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes pop { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { .route { stroke-dashoffset: 0; animation: none; } .pin { opacity: 1; animation: none; } }
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="360" height="300" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="360" height="300" fill="#F4F8FD"/>
+    <!-- water and park -->
+    <path d="M250 0 Q232 70 270 120 Q310 170 290 230 Q280 270 300 300 H360 V0 Z" fill="#D6E6F6"/>
+    <path d="M40 30 Q90 10 120 46 Q140 80 100 96 Q56 110 38 78 Q26 52 40 30 Z" fill="#E3EEF9"/>
+    <!-- streets -->
+    <g stroke="#ffffff" stroke-width="10" stroke-linecap="round">
+      <line x1="-10" y1="140" x2="250" y2="120"/>
+      <line x1="-10" y1="220" x2="270" y2="206"/>
+      <line x1="70" y1="-10" x2="86" y2="310"/>
+      <line x1="170" y1="-10" x2="182" y2="310"/>
+    </g>
+    <g stroke="#E1EAF4" stroke-width="4" stroke-linecap="round">
+      <line x1="-10" y1="60" x2="240" y2="56"/>
+      <line x1="-10" y1="266" x2="280" y2="262"/>
+      <line x1="126" y1="-10" x2="132" y2="310"/>
+      <line x1="222" y1="-10" x2="230" y2="310"/>
+    </g>
+    <!-- route: flat in navy, the climb in light blue -->
+    <path class="route" d="M60 250 C 60 205, 82 200, 84 172 S 120 132, 176 128 S 222 104, 228 78 S 250 46, 268 42"
+          fill="none" stroke="#00356B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M176 128 S 222 104, 228 78" fill="none" stroke="#63AAFF" stroke-width="7" stroke-linecap="round"
+          class="route" style="animation-delay: 1.2s; stroke-dasharray: 120; stroke-dashoffset: 120;"/>
+    <!-- start and finish -->
+    <g class="pin">
+      <circle cx="60" cy="250" r="11" fill="#00356B" stroke="#ffffff" stroke-width="4"/>
+    </g>
+    <g class="pin finish">
+      <line x1="268" y1="44" x2="268" y2="14" stroke="#00356B" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M268 14 h22 l-6 7 l6 7 h-22 Z" fill="#286DC0"/>
+      <circle cx="268" cy="44" r="6" fill="#00356B" stroke="#ffffff" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
