@@ -4,7 +4,7 @@ An AI agent team that plans **safe running routes at the right distance** on rea
 
 > "5 miles from 300 Whitney Ave, end at a bakery" → a 5.05-mile route that finishes at a bakery that's open when you arrive, safety-checked, with a pace plan for each hill, an outfit for the forecast, and a QR code that opens the route on your phone.
 
-**Report:** [`report/report.pdf`](report/report.pdf) (HTML version: [`report/report.html`](report/report.html)). **Slides:** [`slides.html`](slides.html) (open in a browser; arrow keys to move, **F** for full screen).
+**Report:** [`report/report.pdf`](report/report.pdf) (HTML version: [`report/report.html`](report/report.html)). **Slides:** [`slides.html`](slides.html) (open in a browser; arrow keys to move, **F** for full screen; PDF version: [`slides.pdf`](slides.pdf)).
 
 ## How Route Captain is different
 
